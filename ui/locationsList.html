@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+</head>
+<body>
+<h1>test data list</h1>
+<!--        <script src="javascript/test1.js" async defer></script>-->
+<div th:each="location : ${locations}">
+    <p><b>Name:</b> <span th:text="${location.name}"></span></p><br>
+    <p><b>At a glance:</b> <span th:text="${location.initDesc}"></span></p>
+    <!--            <p><b>More details:</b> <span th:text="${location.longDesc}"></span></p>-->
+    <!--            <p><b>Paths:</b> <span th:text="${location.paths}"></span></p>-->
+    <hr>
+</div>
+</body>
+</html>
