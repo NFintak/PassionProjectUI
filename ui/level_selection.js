@@ -1,7 +1,7 @@
 const API_URL = 'http://localhost:8080';
 
 function fetchLevelSelection() {
-    fetch(`${API_URL}/level_selection`)
+    fetch(`${API_URL}/level_selection`) //needs to match Intellij file mapping
     .then(res => {
     return res.json();
     })
@@ -16,18 +16,18 @@ function fetchLevelSelection() {
     document.getElementById('level').innerHTML = errm;
     });
 }
-alert("Hello");
+
 function show(data) {
 
-    const ul = document.getElementById('posts');
+    const ul = document.getElementById('posts'); //needs to match w id in div tag
     const list = document.createDocumentFragment();
 
     data.map(function (post) {
-        console.log('Levels:', post.desc);
+        console.log('Levels:', post);
         let li = document.createElement('li');
         let levelName = document.createElement('p');
         let desc = document.createElement('p');
-        levelName.innerHTML = `<a href="./location.html?id=1"> ${post.levelName}</a>`;
+        levelName.innerHTML = `<a href="./${post.levelName}/locations/list.html?id=1"> ${post.levelName}</a>`;
         desc.innerHTML = `${post.desc}`;
 
         li.appendChild(levelName);
