@@ -19,7 +19,7 @@ function fetchLevelSelection() {
 
 function show(data) {
 
-    const ul = document.getElementById('posts'); //needs to match w id in div tag
+    const ul = document.getElementById('levels'); //needs to match w id in div tag
     const list = document.createDocumentFragment();
 
     data.map(function (post) {

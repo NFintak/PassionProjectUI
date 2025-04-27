@@ -13,13 +13,13 @@ function fetchLevelSelection() {
     errm = `Error fetching data : ${error}`
     console.log(`Error fetching data: ${errm}`);
     console.error("CORS err", errm)
-    document.getElementById('level').innerHTML = errm;
+    document.getElementById('locations').innerHTML = errm;
     });
 }
 
 function show(data) {
 
-    const ul = document.getElementById('posts'); //needs to match w id in div tag
+    const ul = document.getElementById('locations'); //needs to match w id in div tag
     const list = document.createDocumentFragment();
 
     data.map(function (post) {
