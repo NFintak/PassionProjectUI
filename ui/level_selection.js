@@ -27,7 +27,7 @@ function show(data) {
         let li = document.createElement('li');
         let levelName = document.createElement('p');
         let desc = document.createElement('p');
-        levelName.innerHTML = `<a href="./locations.html?id=1"> ${post.levelName}</a>`;
+        levelName.innerHTML = `<a href="./locations.html"> ${post.levelName}</a>`;
         desc.innerHTML = `${post.desc}`;
 
         li.appendChild(levelName);

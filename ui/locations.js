@@ -25,13 +25,16 @@ function show(data) {
     data.map(function (post) {
         console.log('Locations:', post);
         let li = document.createElement('li');
-        let name = document.createElement('p');
+        let locationName = document.createElement('p');
         let initDesc = document.createElement('p');
-        name.innerHTML = `${post.name}`;
-        initDesc.innerHTML = `${post.initDesc}`;
+        let id = document.createElement('p');
+        locationName.innerHTML = `${post.locationName}`;
+        initDesc.innerHTML = `At a glance: ${post.initDesc}`;
+        id.innerHTML = `<a href="./locations/${id}>" see more?`;
 
-        li.appendChild(name);
+        li.appendChild(locationName);
         li.appendChild(initDesc);
+        li.appendChild(id);
         list.appendChild(li);
 
         });
