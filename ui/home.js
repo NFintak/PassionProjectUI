@@ -1,7 +1,7 @@
 const API_URL = 'http://localhost:8080';
 
 function fetchLevelSelection() {
-    fetch(`${API_URL}/api/index`)
+    fetch(`${API_URL}/home`)
     .then(res => {
     return res.json();
     })
